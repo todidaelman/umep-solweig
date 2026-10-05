@@ -755,6 +755,7 @@ def solweig_run(configPath, feedback):
             timeStep = 0
             walls_scheme = torch.ones((rows, cols), device=device) * 10.0
             dirwalls_scheme = torch.ones((rows, cols), device=device) * 10.0
+            static = None
 
         # Clean up wall scheme setup tensors
         if device.type == "cuda":
